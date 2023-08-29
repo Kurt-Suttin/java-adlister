@@ -3,20 +3,13 @@
     String submittedUsername = request.getParameter("user");
     String submittedPassword = request.getParameter("pass");
 
-//    if ("user".equals(submittedUsername) && "pass".equals(submittedPassword)) {
-//        // Redirect to profile page
-//        response.sendRedirect("profile.jsp");
-//    } else {
-//        // Redirect back to login form
-//        response.sendRedirect("login.jsp");
-//    }
 %>
 <html>
 <head>
-    <title>Title</title>
+    <title>LOGIN</title>
     <%@ include file="partials/head.jsp" %>
 </head>
-<body class="green">
+<body class="blue">
 <%@ include file="partials/navbar.jsp" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -30,7 +23,7 @@
     <c:otherwise>
 
         <h1>Login Form</h1>
-        <form method="post" action="login.jsp">
+        <form method="POST" action="login.jsp">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br><br>
 
