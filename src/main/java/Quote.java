@@ -2,18 +2,21 @@ import java.util.List;
 
 public class Quote {
     private long id;
-    private String name;
+    private String content;
 
-    List<Album> albums;
+    private Author author;
+
+
     public Quote() {
     }
 
-    public List<Album> getAlbums() {
-        return albums;
+    public Quote(String content) {
+        this.content = content;
     }
 
-    public void setAlbums(List<Album> albums) {
-        this.albums = albums;
+    public Quote(String content, Author author) {
+        this.content = content;
+        this.author = author;
     }
 
     public long getId() {
@@ -24,11 +27,19 @@ public class Quote {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getContent() {
+        return content;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }

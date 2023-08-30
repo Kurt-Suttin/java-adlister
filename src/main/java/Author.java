@@ -2,29 +2,25 @@ import java.util.List;
 
 public class Author {
     private long id;
-    private String name;
-    List<Album> albums;
+    private String firstName;
+    private String lastName;
+
+    private List<Quote> quotes;
+
 
     public Author() {
     }
 
-    public String getName() {
-        return name;
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Author(String firstName, String lastName, List<Quote> quotes) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.quotes = quotes;
     }
-
-    public List<Album> getAlbums() {
-        return albums;
-    }
-
-    public void setAlbums(List<Album> albums) {
-        this.albums = albums;
-    }
-
-
 
     public long getId() {
         return id;
@@ -33,4 +29,33 @@ public class Author {
     public void setId(long id) {
         this.id = id;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public List<Quote> getQuotes() {
+        return quotes;
+    }
+
+    public void setQuotes(List<Quote> quotes) {
+        this.quotes = quotes;
+    }
+
+    public void addQuote(Quote quote){
+        this.quotes.add(quote);
+    }
+
 }
